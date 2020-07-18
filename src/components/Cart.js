@@ -25,7 +25,7 @@ class Cart extends Component {
         
     }
     async getCurrency() {
-        const fetchCurrencyApi = await fetch('http://data.fixer.io/api/latest?access_key=8d872f878c3f127edc67937cb2b686f5&symbols=USD&format=1');
+        const fetchCurrencyApi = await fetch('https://data.fixer.io/api/latest?access_key=8d872f878c3f127edc67937cb2b686f5&symbols=USD&format=1');
         const json = await fetchCurrencyApi.json();
         let USD = Object.values(json['rates']);
         USD = USD[0];
