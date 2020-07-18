@@ -18,7 +18,6 @@ class Cart extends Component {
 
     }
     componentDidMount() {
-        this.getCurrency();
         setTimeout(() => {
         this.getCartInfo();
     }, 1500);    
