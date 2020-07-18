@@ -54,7 +54,8 @@ class App extends Component {
       headers: {
           Accept: 'application/json',
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer ' + token
+          'Authorization': 'Bearer ' + token,
+          'X-Requested-With': 'XMLHttpRequest'
 
       },
   };
