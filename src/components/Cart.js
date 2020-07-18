@@ -18,11 +18,23 @@ class Cart extends Component {
 
     }
     componentDidMount() {
+        this.getCurrency();
         setTimeout(() => {
         this.getCartInfo();
     }, 1500);
+        
     }
-    async getCartInfo(){
+    async getCurrency() {
+        const fetchCurrencyApi = await fetch('http://data.fixer.io/api/latest?access_key=8d872f878c3f127edc67937cb2b686f5&symbols=USD&format=1');
+        const json = await fetchCurrencyApi.json();
+        let USD = Object.values(json['rates']);
+        USD = USD[0];
+        
+        this.setState({
+            USDcurrency: USD
+        })
+    }
+    getCartInfo(){
        
         let cart = localStorage.getItem('cart');
         cart = JSON.parse(cart);
@@ -43,14 +55,7 @@ class Cart extends Component {
             isLoaded: true
         });
       
-        const fetchCurrencyApi = await fetch('http://data.fixer.io/api/latest?access_key=8d872f878c3f127edc67937cb2b686f5&symbols=USD&format=1');
-        const json = await fetchCurrencyApi.json();
-        let USD = Object.values(json['rates']);
-        USD = USD[0];
-        
-        this.setState({
-            USDcurrency: USD
-        })
+       
     }
 
     render() { 
