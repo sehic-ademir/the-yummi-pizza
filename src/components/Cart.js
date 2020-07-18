@@ -74,7 +74,7 @@ class Cart extends Component {
                             <hr />
                         </div>
                        
-                       { cart.length > 0 ? 
+                       { cart ? 
                         cart.map((item) => 
                         <div className="col-xl-12" onClick={this.getCartInfo} key={item.id}><CartItem  id={item.id} quantity={item.quantity} /></div>
                         
