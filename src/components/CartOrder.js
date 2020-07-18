@@ -7,7 +7,6 @@ class CartOrder extends Component {
             address: '',
             phone: '',
             note: '',
-            haha: 'dudee'
          }
          this.handleChange = this.handleChange.bind(this);
          this.handleSubmit = this.handleSubmit.bind(this);

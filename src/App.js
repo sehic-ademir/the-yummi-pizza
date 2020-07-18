@@ -26,10 +26,7 @@ class App extends Component {
     this.checkCartQuantity();
   }
  
-  // componentDidUpdate() {
-  //   if(Object.keys(JSON.parse(localStorage.getItem('cart'))).length !== this.state.storageLength)
-  //     this.checkCartQuantity();
-  // }
+
   checkCartQuantity() {
     let cart = localStorage.getItem('cart');
     cart = JSON.parse(cart);
@@ -62,7 +59,7 @@ class App extends Component {
       },
   };
   try {
-      const fetchResponse = await fetch(`http://127.0.0.1:8000/api/auth/user/`, settings);
+      const fetchResponse = await fetch(`http://the-yummi-pizza-sehic.herokuapp.com/public/api/auth/user/`, settings);
       const data = await fetchResponse.json();
       if(fetchResponse.status === 401){
           this.setState({

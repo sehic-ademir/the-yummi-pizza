@@ -28,7 +28,7 @@ class Orders extends Component {
         const id = localStorage.getItem('OrderID');
         if(id) {
             let data = [];
-            const getOrders = await fetch('http://127.0.0.1:8000/api/orders/getOrders/' + id);
+            const getOrders = await fetch('http://the-yummi-pizza-sehic.herokuapp.com/public/api/orders/getOrders/' + id);
             const ordersJson = await getOrders.json();
             data = JSON.stringify(data);
             data = JSON.parse(data);
@@ -40,10 +40,10 @@ class Orders extends Component {
                     phone: ordersJson[i]['phone']
                 });
                 data[i]['order'] = [{}];
-            const getSingleOrder = await fetch('http://127.0.0.1:8000/api/orders/getOrderProducts/' + ordersJson[i]['id']);
+            const getSingleOrder = await fetch('http://the-yummi-pizza-sehic.herokuapp.com/public/api/orders/getOrderProducts/' + ordersJson[i]['id']);
             const singleOrderJson = await getSingleOrder.json();
                 for(let j = 0; j < singleOrderJson.length; j++){
-                    const getPizza = await fetch('http://127.0.0.1:8000/api/pizza/one/' + singleOrderJson[j]['pizza_id']);
+                    const getPizza = await fetch('http://the-yummi-pizza-sehic.herokuapp.com/public/api/pizza/one/' + singleOrderJson[j]['pizza_id']);
                     const pizzaJson = await getPizza.json();
                     data[i]['order'][j] = {
                         name: pizzaJson['name'],

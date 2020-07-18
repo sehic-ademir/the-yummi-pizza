@@ -48,7 +48,7 @@ class FoodItem extends Component {
             <div className="col-lg-12 col-md-12 col-12">
                 <div className="row">
                 <div className="col-xl-3 col-lg-4 col-md-3 col-12">
-                    <img src={`http://127.0.0.1:8000/images/${this.props.photo}`} width="150" height="150" className="img-fluid" alt="food" />
+                    <img src={`http://the-yummi-pizza-sehic.herokuapp.com/public/images/${this.props.photo}`} width="150" height="150" className="img-fluid" alt="food" />
                 </div>
                 <div className="col-xl-6 col-lg-4 col-md-5 col-12 my-auto text-md-left text-center">
                     <div className="">

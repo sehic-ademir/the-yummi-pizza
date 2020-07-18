@@ -18,7 +18,7 @@ class CartItem extends Component {
         });
     }
     async getPizza(){
-        const res = await fetch('http://127.0.0.1:8000/api/pizza/one/'+ this.props.id);
+        const res = await fetch('http://the-yummi-pizza-sehic.herokuapp.com/public/api/pizza/one/'+ this.props.id);
         const json = await res.json();
         let cart = localStorage.getItem('cart');
         cart = JSON.parse(cart);
@@ -82,7 +82,7 @@ class CartItem extends Component {
             <div className="col-xl-12 row no-gutters">
                 
                 <div className="col-xl-3 col-lg-4 col-md-3 col-12 text-center">
-                    <img src={`http://127.0.0.1:8000/images/${photo}`} width="150" height="150" className="img-fluid" alt="food" />
+                    <img src={`http://the-yummi-pizza-sehic.herokuapp.com/public/images/${photo}`} width="150" height="150" className="img-fluid" alt="food" />
                 </div>
           
                 <div className="col-xl-6 col-lg-4 col-md-5 col-12 my-auto text-md-left text-center row no-gutters">
@@ -105,7 +105,7 @@ class CartItem extends Component {
                 </div>
                 <hr className="col-12" />
             </div>
-       : ''}
+       : <div className="col-lg-12 col-12 bg-light my-4"><i className="fas fa-spinner text-danger fa-spin fa-4x"></i></div>}
             </section>
          );
     }
