@@ -54,9 +54,6 @@ class App extends Component {
       headers: {
           Accept: 'application/json',
           'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': 'https://the-yummi-pizza-sehic.herokuapp.com/public/api/',
-          'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
-          'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token, Authorization',
           'Authorization': 'Bearer ' + token,
           'X-Requested-With': 'XMLHttpRequest',
       },
