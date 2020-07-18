@@ -58,10 +58,10 @@ class App extends Component {
           'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
           'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token, Authorization',
           'Authorization': 'Bearer ' + token,
-          'X-Requested-With': 'XMLHttpRequest'
-
-
+          'X-Requested-With': 'XMLHttpRequest',
       },
+      credentials: 'include'
+
   };
 
   try {
