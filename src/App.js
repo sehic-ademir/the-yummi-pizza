@@ -59,7 +59,7 @@ class App extends Component {
       },
   };
   try {
-      const fetchResponse = await fetch(`http://the-yummi-pizza-sehic.herokuapp.com/public/api/auth/user/`, settings);
+      const fetchResponse = await fetch(`https://the-yummi-pizza-sehic.herokuapp.com/public/api/auth/user/`, settings);
       const data = await fetchResponse.json();
       if(fetchResponse.status === 401){
           this.setState({

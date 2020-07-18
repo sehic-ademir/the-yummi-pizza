@@ -45,7 +45,7 @@ class Login extends Component {
             body: JSON.stringify(bodyData)
         };
         try {
-            const fetchResponse = await fetch(`http://the-yummi-pizza-sehic.herokuapp.com/public/api/auth/login`, settings);
+            const fetchResponse = await fetch(`https://the-yummi-pizza-sehic.herokuapp.com/public/api/auth/login`, settings);
             const data = await fetchResponse.json();
             if(fetchResponse.status > 400){
                 this.setState({

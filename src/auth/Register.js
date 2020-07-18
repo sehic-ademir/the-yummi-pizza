@@ -43,7 +43,7 @@ class Register extends Component {
             body: JSON.stringify(bodyData)
         };
         try {
-            const fetchResponse = await fetch('http://the-yummi-pizza-sehic.herokuapp.com/public/api/auth/signup', settings);
+            const fetchResponse = await fetch('https://the-yummi-pizza-sehic.herokuapp.com/public/api/auth/signup', settings);
             const data = await fetchResponse.json();
             if(fetchResponse.status > 401){
                 this.setState({

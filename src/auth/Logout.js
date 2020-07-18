@@ -18,7 +18,7 @@ class Logout extends Component {
                'Authorization': 'Bearer ' + token
            },
        };
-        const res = await fetch('http://the-yummi-pizza-sehic.herokuapp.com/public/api/auth/logout', settings);
+        const res = await fetch('https://the-yummi-pizza-sehic.herokuapp.com/public/api/auth/logout', settings);
         if(res)
         localStorage.removeItem('id');
         window.location.reload();

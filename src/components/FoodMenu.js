@@ -16,7 +16,7 @@ class FoodMenu extends Component {
     }
      getPizzas(){
         setTimeout  ( async ( ) => {
-        const res = await fetch('http://the-yummi-pizza-sehic.herokuapp.com/public/api/pizza/index');
+        const res = await fetch('https://the-yummi-pizza-sehic.herokuapp.com/public/api/pizza/index');
         const json = await res.json();
         this.setState({
             pizza: json,
