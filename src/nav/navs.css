@@ -1,0 +1,14 @@
+#basic-nav-dropdown-2{
+    color: white;
+}
+.cartQuantity {
+    font-size: .6rem;
+    position: absolute;
+    bottom: 0.4em;
+    right: 0.1em;
+    width: 15px;
+    height: 15px;
+    color: #fff;
+    background-color: #dc3545;
+    border-radius: 50%;
+}

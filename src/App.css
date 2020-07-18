@@ -2,6 +2,7 @@
   text-align: center;
 }
 
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +36,79 @@
   to {
     transform: rotate(360deg);
   }
+}
+.btn-cart-checkout {
+  font-weight: 600 !important;
+}
+.caption-menu {
+  font-family: 'Lobster', cursive;
+}
+.menu-section{
+  border: 5px solid #343a40;
+}
+.header-menu {
+  background-position-y: center;
+  background-size: cover;
+  letter-spacing: .5rem;
+  overflow-x: hidden !important;
+}
+.header-menu > div {
+margin: 15em 0;
+
+}
+.header-menu h1{
+  font-family: 'Marck Script', cursive;
+  font-size: 4em;
+}
+.header-menu h3 {
+  font-family: 'Teko', sans-serif;
+  letter-spacing: .2rem;
+  font-size: 2em;
+}
+.register-title{
+  font-family: 'Marck Script', cursive;
+
+}
+@media screen and (max-width: 600px) {
+  .header-menu h1 {
+    font-size: 2em;
+  }
+  .header-menu h3 {
+    font-size: 1em;
+  }
+}
+.bg-transparent-dark{
+  background-color: rgba(52, 58, 64, 0.5);
+}
+* {
+  text-decoration: none !important;
+}
+.food-menu{
+  overflow: hidden;
+}
+.formPhoto{
+  background-size: cover;
+  background-position-y: center;
+  background-position-x: center;
+
+}
+.login-register {
+ background-color: transparent !important;
+}
+.login-register input{
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0px;
+  border-bottom: 1.5px solid #6c757d;
+  background-color: transparent !important;
+}
+.login-register input:focus {
+  border-bottom: 1.5px solid #dc3545;
+}
+.login-register-box {
+  background-color: #1d2d46;
+  -webkit-box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.75);
 }
