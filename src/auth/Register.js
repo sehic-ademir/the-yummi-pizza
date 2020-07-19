@@ -80,19 +80,19 @@ class Register extends Component {
                 </div>
                     <div class="form-group">
                         <label for="name" className="col-xl-8 col-lg-12 col-md-12 align-self-center text-left">Name</label>
-                        <input type="text" class="form-control col-xl-8 mx-auto col-lg-6 col-md-5 align-self-center" id="name" name="name"  value={this.state.name || ''} onChange={this.handleChange} required />
+                        <input type="text" class="text-light form-control col-xl-8 mx-auto col-lg-6 col-md-5 align-self-center" id="name" name="name"  value={this.state.name || ''} onChange={this.handleChange} required />
                     </div>
                     <div class="form-group">
                         <label for="email" className="col-xl-8 col-lg-12 col-md-12 align-self-center text-left">Email address</label>
-                        <input type="email" class="form-control col-xl-8 mx-auto col-lg-6 col-md-5 align-self-center" id="email" name="email"  value={this.state.email || ''} onChange={this.handleChange} required />
+                        <input type="email" class="text-light form-control col-xl-8 mx-auto col-lg-6 col-md-5 align-self-center" id="email" name="email"  value={this.state.email || ''} onChange={this.handleChange} required />
                     </div>
                     <div class="form-group">
                         <label for="password" className="col-xl-8 col-lg-12 col-md-12 align-self-center text-left">Password</label>
-                        <input type="password" class="form-control col-xl-8 mx-auto col-lg-6 col-md-5 align-self-center" id="password" name="password" value={this.state.password} onChange={this.handleChange} required />
+                        <input type="password" class="text-light form-control col-xl-8 mx-auto col-lg-6 col-md-5 align-self-center" id="password" name="password" value={this.state.password} onChange={this.handleChange} required />
                     </div>
                     <div class="form-group">
                         <label for="password_confirmation" className="col-xl-8 col-lg-12 col-md-12 align-self-center text-left">Confirm Password</label>
-                        <input type="password" class="form-control col-xl-8 mx-auto col-lg-6 col-md-5 align-self-center" id="password_confirmation" name="password_confirmation" value={this.state.password_confirmation} onChange={this.handleChange} required />
+                        <input type="password" class="text-light form-control col-xl-8 mx-auto col-lg-6 col-md-5 align-self-center" id="password_confirmation" name="password_confirmation" value={this.state.password_confirmation} onChange={this.handleChange} required />
                     </div>
                     <p className="text-danger">{this.state.registration_errors}</p>
                     <button type="submit" class="btn btn-danger mt-3">Register</button>

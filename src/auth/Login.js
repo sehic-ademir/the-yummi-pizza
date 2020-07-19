@@ -85,11 +85,11 @@ class Login extends Component {
                 </div>
                     <div class="form-group">
                         <label htmlFor="email" className="col-xl-8 col-lg-12 col-md-12 align-self-center text-left">E-mail</label>
-                        <input type="email" class="form-control col-xl-8 mx-auto col-lg-12 col-md-12 align-self-center" id="email" name="email"  value={this.state.email} onChange={this.handleChange} required />
+                        <input type="email" class="text-light form-control col-xl-8 mx-auto col-lg-12 col-md-12 align-self-center" id="email" name="email"  value={this.state.email} onChange={this.handleChange} required />
                     </div>
                     <div class="form-group">
                         <label htmlFor="password" className="col-xl-8 col-lg-12 col-md-12 align-self-center text-left">Password</label>
-                        <input type="password" class="form-control col-xl-8 mx-auto col-lg-12 col-md-12 align-self-center" id="password" name="password" value={this.state.password} onChange={this.handleChange} required />
+                        <input type="password" class="text-light form-control col-xl-8 mx-auto col-lg-12 col-md-12 align-self-center" id="password" name="password" value={this.state.password} onChange={this.handleChange} required />
                     </div>
                     <p className="text-danger">{this.state.registration_errors}</p>
                     <button type="submit" class="btn btn-danger w-50 mt-5">Login</button>
