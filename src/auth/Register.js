@@ -54,10 +54,7 @@ class Register extends Component {
                     this.setState({
                         registration_errors: '',
                     });
-                    localStorage.setItem('id', data['token']);
-                    console.log(localStorage.getItem('id'));
                     window.location.reload();
-
                 }
                 console.log(data.errors[0].msg);
                 

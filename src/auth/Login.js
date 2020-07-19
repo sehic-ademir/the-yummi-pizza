@@ -57,6 +57,7 @@ class Login extends Component {
                         registration_errors: '',
                     });
                     localStorage.setItem('id', data['access_token']);
+                    document.cookie = `id=${data['access_token']}`;
                     window.location.reload();
                   
                 }

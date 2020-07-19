@@ -8,6 +8,7 @@ import Cart from './components/Cart';
 import Login from './auth/Login';
 import Logout from './auth/Logout';
 import Register from './auth/Register';
+import axios from 'axios';
 // import Orders from './components/Orders';
 
 class App extends Component {
@@ -60,9 +61,26 @@ class App extends Component {
       credentials: 'include'
 
   };
-
+  // let config = {
+  //   headers: {
+  //     Accept: 'application/json',
+  //     'Content-Type': 'application/json',
+  //     'Authorization': 'Bearer ' + token,
+  //     'X-Requested-With': 'XMLHttpRequest',
+  //   },
+  //   withCredentials: true
+  // }
+  // axios
+  // .get(
+  //   "https://the-yummi-pizza-sehic.herokuapp.com/public/api/auth/user", config)
+  //   .then(response => {
+  //     console.log(response)
+  //   })
+  //   .catch(error => {
+  //     console.log(error);
+  //   });
   try {
-      const fetchResponse = await fetch(`https://the-yummi-pizza-sehic.herokuapp.com/public/api/auth/user/`, settings);
+      const fetchResponse = await fetch(`https://the-yummi-pizza-sehic.herokuapp.com/public/api/auth/user`, settings);
       const data = await fetchResponse.json();
       if(fetchResponse.status === 401){
           this.setState({
