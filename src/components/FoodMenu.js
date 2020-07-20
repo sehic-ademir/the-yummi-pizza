@@ -14,15 +14,15 @@ class FoodMenu extends Component {
     componentDidMount() {
         this.getPizzas();    
     }
-     getPizzas(){
-        setTimeout  ( async ( ) => {
+    async getPizzas(){
+       
         const res = await fetch('https://the-yummi-pizza-sehic.herokuapp.com/public/api/pizza/index');
         const json = await res.json();
         this.setState({
             pizza: json,
             isLoaded: true
         });
-    }, 900);
+    
     }
     render() { 
         const pizza = this.state.pizza;

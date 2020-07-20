@@ -45,7 +45,9 @@ class Cart extends Component {
         });  
     }
     render() { 
-        const cart = this.state.cart;
+        let cart = this.state.cart;
+            if(cart === null) 
+                cart = [];
         const USD = (this.state.totalPrice * this.state.USDcurrency).toFixed(2);
         const totalPrice = (this.state.totalPrice).toFixed(2);
         let priceWithDelivery = this.state.totalPrice + this.state.deliveryPrice;
@@ -65,7 +67,7 @@ class Cart extends Component {
                             <hr />
                         </div>
                        
-                       { cart ? 
+                       { cart.length > 0 ? 
                         cart.map((item) => 
                         <div className="col-xl-12" onClick={this.getCartInfo} key={item.id}><CartItem  id={item.id} quantity={item.quantity} /></div>
                         
