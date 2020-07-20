@@ -18,9 +18,9 @@ class Cart extends Component {
 
     }
     componentDidMount() {
-        setTimeout(() => {
+     
         this.getCartInfo();
-    }, 1500);    
+    
     }
 
     getCartInfo(){
