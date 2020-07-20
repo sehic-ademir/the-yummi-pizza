@@ -11,8 +11,18 @@ class FoodMenu extends Component {
          }
 
     }
+    async fetchItemsInBackground(){
+        const res = await fetch('https://the-yummi-pizza-sehic.herokuapp.com/public/api/pizza/index');
+        const json = await res.json();
+        if(this.state.pizza.length !== json.length){
+        localStorage.setItem('foodMenu', JSON.stringify(json));
+            alert('We added more products, refresh to see them!');
+        }
+    }
     componentDidMount() {
-        let localStg = JSON.parse(localStorage.getItem('foodMenu'));
+        let localStg = [];
+        if(localStorage.getItem('foodMenu') !== null)
+        localStg = JSON.parse(localStorage.getItem('foodMenu'));
         if(localStg.length < 1){
             this.getPizzas();  
         }
@@ -23,6 +33,7 @@ class FoodMenu extends Component {
                     pizza: JSON.parse(localStorage.getItem('foodMenu'))
                 });
             }, 100);
+            this.fetchItemsInBackground();
         }
     }
     async getPizzas(){
