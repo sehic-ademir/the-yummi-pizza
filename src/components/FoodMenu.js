@@ -12,7 +12,18 @@ class FoodMenu extends Component {
 
     }
     componentDidMount() {
-        this.getPizzas();    
+        let localStg = JSON.parse(localStorage.getItem('foodMenu'));
+        if(localStg.length < 1){
+            this.getPizzas();  
+        }
+        else {
+            setTimeout(() => {
+                this.setState({
+                    isLoaded: true,
+                    pizza: JSON.parse(localStorage.getItem('foodMenu'))
+                });
+            }, 100);
+        }
     }
     async getPizzas(){
        
@@ -22,7 +33,8 @@ class FoodMenu extends Component {
             pizza: json,
             isLoaded: true
         });
-    
+        console.log(json);
+        localStorage.setItem('foodMenu', JSON.stringify(json));
     }
     render() { 
         const pizza = this.state.pizza;
