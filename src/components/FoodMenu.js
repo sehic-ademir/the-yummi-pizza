@@ -44,7 +44,6 @@ class FoodMenu extends Component {
             pizza: json,
             isLoaded: true
         });
-        console.log(json);
         localStorage.setItem('foodMenu', JSON.stringify(json));
     }
     render() { 
