@@ -18,20 +18,20 @@ class CartItem extends Component {
         });
     }
     async getPizza(){
-        const res = await fetch('https://the-yummi-pizza-sehic.herokuapp.com/public/api/pizza/one/'+ this.props.id);
-        const json = await res.json();
         let cart = localStorage.getItem('cart');
         cart = JSON.parse(cart);
         let quantity = 0;
+        let thisPizza = '';
         for(let i = 0; i < Object.keys(cart).length; i++){
-            if(Object.values(cart)[i]['id'] === this.props.id)
+            if(Object.values(cart)[i]['id'] === this.props.id){
                 quantity = Object.values(cart)[i]['quantity'];
+                thisPizza = cart[i];
+            }
         }
         this.setState({
-            pizza: json,
+            pizza: thisPizza,
             quantity: quantity
         });
-        console.log(cart);
 
     }
     handleAddPizza(e){
@@ -46,7 +46,7 @@ class CartItem extends Component {
         cart = JSON.parse(cart);
         for(let i = 0; i < Object.keys(cart).length; i++){
         if(Object.values(cart)[i]['id'] === this.props.id)
-        Object.values(cart)[i]['quantity'] = quantity
+            Object.values(cart)[i]['quantity'] = quantity;
         }
         localStorage.removeItem('cart');
         localStorage.setItem('cart', JSON.stringify(cart));

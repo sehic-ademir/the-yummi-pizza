@@ -33,7 +33,10 @@ class FoodItem extends Component {
         storage.push({
             id: this.props.id,
             quantity: 1,
-            price: this.props.price
+            name: this.props.name,
+            price: this.props.price,
+            ingredients: this.props.ingredients,
+            photo: this.props.photo
         });
     }
         localStorage.setItem('cart', JSON.stringify(storage));

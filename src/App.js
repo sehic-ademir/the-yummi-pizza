@@ -8,7 +8,6 @@ import Cart from './components/Cart';
 import Login from './auth/Login';
 import Logout from './auth/Logout';
 import Register from './auth/Register';
-import axios from 'axios';
 // import Orders from './components/Orders';
 
 class App extends Component {
